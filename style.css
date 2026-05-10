@@ -1,0 +1,120 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#050816;
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:black;
+  padding:20px;
+}
+
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
+
+header button{
+  padding:10px;
+  background:#2563eb;
+  color:white;
+  border:none;
+}
+
+.hero{
+  text-align:center;
+  padding:120px 20px;
+  background:linear-gradient(to right,#000428,#004e92);
+}
+
+.hero h2{
+  font-size:60px;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:22px;
+}
+
+.login-section,
+.dashboard,
+.countdown-section,
+#missions,
+#nasa,
+#tracker,
+#chatbot{
+  text-align:center;
+  padding:60px;
+}
+
+.login-section input{
+  padding:12px;
+  margin:10px;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.card,
+.box{
+  background:#111827;
+  width:250px;
+  padding:20px;
+  border-radius:10px;
+}
+
+.dashboard-box{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+#countdown{
+  font-size:80px;
+  color:yellow;
+}
+
+#nasaImage{
+  width:400px;
+  margin-top:20px;
+  border-radius:10px;
+}
+
+#chatbot input{
+  padding:12px;
+  width:300px;
+}
+
+#chatbot button{
+  padding:12px;
+  background:#2563eb;
+  color:white;
+  border:none;
+}
+
+.light-mode{
+  background:white;
+  color:black;
+}
+
+.light-mode .card,
+.light-mode .box{
+  background:#eee;
+  color:black;
+}
