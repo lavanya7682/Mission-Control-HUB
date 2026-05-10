@@ -100,3 +100,58 @@ function chatbot(){
     .innerText = response;
 
 }
+#tracker{
+
+  text-align:center;
+  padding:60px;
+
+}
+
+#tracker iframe{
+
+  border:none;
+  border-radius:15px;
+  margin-top:20px;
+
+}
+
+#chatbot{
+
+  text-align:center;
+  padding:60px;
+
+}
+
+#chatbot input{
+
+  width:320px;
+  padding:14px;
+  border-radius:8px;
+  border:none;
+
+}
+
+#chatbot button{
+
+  padding:14px 20px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:8px;
+  margin-left:10px;
+  cursor:pointer;
+
+}
+
+#chatResponse{
+
+  margin-top:30px;
+  background:#111827;
+  padding:25px;
+  border-radius:12px;
+  width:70%;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:18px;
+
+}
