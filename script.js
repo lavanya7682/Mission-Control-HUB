@@ -1,0 +1,102 @@
+function toggleTheme(){
+
+  document.body.classList.toggle("light-mode");
+
+}
+
+function login(){
+
+  let username =
+    document.getElementById("username").value;
+
+  let password =
+    document.getElementById("password").value;
+
+  if(username !== "" && password !== ""){
+
+    document.getElementById("welcome").innerText =
+      "Welcome " + username + " 🚀";
+
+  }
+
+  else{
+
+    alert("Enter username and password");
+
+  }
+
+}
+
+let count = 10;
+
+setInterval(()=>{
+
+  document.getElementById("countdown").innerText =
+    count;
+
+  count--;
+
+  if(count < 0){
+
+    count = 10;
+
+  }
+
+},1000);
+
+async function getNASAData(){
+
+  let url =
+    "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+
+  let response = await fetch(url);
+
+  let data = await response.json();
+
+  document.getElementById("nasaImage").src =
+    data.url;
+
+  document.getElementById("nasaTitle").innerText =
+    data.title;
+
+  document.getElementById("nasaDesc").innerText =
+    data.explanation;
+
+}
+
+getNASAData();
+
+function chatbot(){
+
+  let input =
+    document.getElementById("chatInput")
+    .value
+    .toLowerCase();
+
+  let response = "";
+
+  if(input.includes("moon")){
+
+    response =
+      "Moon missions include Apollo 11 and Chandrayaan.";
+
+  }
+
+  else if(input.includes("mars")){
+
+    response =
+      "Mars missions include Mangalyaan.";
+
+  }
+
+  else{
+
+    response =
+      "Space exploration is amazing 🚀";
+
+  }
+
+  document.getElementById("chatResponse")
+    .innerText = response;
+
+}
