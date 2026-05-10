@@ -4,6 +4,8 @@ function toggleTheme(){
 
 }
 
+// LOGIN
+
 function login(){
 
   let username =
@@ -27,6 +29,8 @@ function login(){
 
 }
 
+// COUNTDOWN
+
 let count = 10;
 
 setInterval(()=>{
@@ -43,6 +47,8 @@ setInterval(()=>{
   }
 
 },1000);
+
+// NASA API
 
 async function getNASAData(){
 
@@ -66,6 +72,89 @@ async function getNASAData(){
 
 getNASAData();
 
+// MISSION DETAILS
+
+function showMission(name){
+
+  let details =
+    document.getElementById("missionDetails");
+
+  if(name === "Chandrayaan-3"){
+
+    details.innerHTML = `
+
+      <h2>🌕 Chandrayaan-3</h2>
+
+      <p>
+      ISRO's successful Moon landing mission.
+      </p>
+
+      <img
+      src="https://www.isro.gov.in/media_isro/image/index/Chandrayaan3/Ch3_landing.png"
+      width="300">
+
+    `;
+
+  }
+
+  else if(name === "Mangalyaan"){
+
+    details.innerHTML = `
+
+      <h2>🔴 Mangalyaan</h2>
+
+      <p>
+      India's first Mars mission.
+      </p>
+
+      <img
+      src="https://www.isro.gov.in/media_isro/image/index/MarsOrbiterMission.jpg"
+      width="300">
+
+    `;
+
+  }
+
+  else if(name === "Apollo 11"){
+
+    details.innerHTML = `
+
+      <h2>🚀 Apollo 11</h2>
+
+      <p>
+      First human Moon landing mission.
+      </p>
+
+      <img
+      src="https://www.nasa.gov/wp-content/uploads/2023/03/as11-40-5874orig.jpg"
+      width="300">
+
+    `;
+
+  }
+
+  else if(name === "James Webb"){
+
+    details.innerHTML = `
+
+      <h2>🛰 James Webb Telescope</h2>
+
+      <p>
+      Deep space telescope by NASA.
+      </p>
+
+      <img
+      src="https://www.nasa.gov/wp-content/uploads/2023/03/webb.png"
+      width="300">
+
+    `;
+
+  }
+
+}
+
+// AI CHATBOT
+
 function chatbot(){
 
   let input =
@@ -78,80 +167,39 @@ function chatbot(){
   if(input.includes("moon")){
 
     response =
-      "Moon missions include Apollo 11 and Chandrayaan.";
+      "🌕 Moon missions include Apollo 11 and Chandrayaan-3.";
 
   }
 
   else if(input.includes("mars")){
 
     response =
-      "Mars missions include Mangalyaan.";
+      "🔴 Mars missions include Mangalyaan.";
+
+  }
+
+  else if(input.includes("nasa")){
+
+    response =
+      "🚀 NASA is the United States space agency.";
+
+  }
+
+  else if(input.includes("isro")){
+
+    response =
+      "🇮🇳 ISRO is India's Space Research Organisation.";
 
   }
 
   else{
 
     response =
-      "Space exploration is amazing 🚀";
+      "🤖 Ask about Moon, Mars, NASA or ISRO.";
 
   }
 
   document.getElementById("chatResponse")
-    .innerText = response;
-
-}
-#tracker{
-
-  text-align:center;
-  padding:60px;
-
-}
-
-#tracker iframe{
-
-  border:none;
-  border-radius:15px;
-  margin-top:20px;
-
-}
-
-#chatbot{
-
-  text-align:center;
-  padding:60px;
-
-}
-
-#chatbot input{
-
-  width:320px;
-  padding:14px;
-  border-radius:8px;
-  border:none;
-
-}
-
-#chatbot button{
-
-  padding:14px 20px;
-  background:#2563eb;
-  color:white;
-  border:none;
-  border-radius:8px;
-  margin-left:10px;
-  cursor:pointer;
-
-}
-
-#chatResponse{
-
-  margin-top:30px;
-  background:#111827;
-  padding:25px;
-  border-radius:12px;
-  width:70%;
-  margin-left:auto;
-  margin-right:auto;
-  font-size:18px;
+    .innerHTML = response;
 
 }
